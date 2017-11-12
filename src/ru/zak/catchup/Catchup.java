@@ -10,6 +10,7 @@ public class Catchup extends Thread {
         setName("Мышь");
     }
 
+
     public static void main(String[] args) {
         Catchup catchup = new Catchup();
         Thread thread = Thread.currentThread();
