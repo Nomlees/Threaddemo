@@ -13,9 +13,6 @@ public class Play extends Thread{
         this.twoPriority = twoPriority;
     }
 
-    public Play() {
-        this("Player",10,1);
-    }
     public void run(){
         Thread thread = Thread.currentThread();
         thread.setPriority(onePriority);
