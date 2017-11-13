@@ -3,17 +3,17 @@ package ru.zak.chicken;
 
 public class Chicken extends Thread {
     public static void main(String[]args) {
+        Egg egg = new Egg();
         Chickens chickens = new Chickens();
-        ChickenMather chickenMather = new ChickenMather();
         (new Thread(new Chickens())).start();
-        (new Thread(new ChickenMather())).start();
+        (new Thread(new Chickens())).start();
 
-       System.out.println(chickenMather);
        System.out.println(chickens);
+       System.out.println(egg);
 
 
     }
-public static class Chickens extends Thread{
+public static class Egg extends Thread{
     public void run() {
         for (int i = 0; i < 10; i++) {
             try {
@@ -28,7 +28,7 @@ public static class Chickens extends Thread{
     }
 
 
-    public static class ChickenMather extends Thread{
+    public static class Chickens extends Thread{
         public void run() {
             for (int i = 0; i < 10; i++) {
                 try {
@@ -43,27 +43,3 @@ public static class Chickens extends Thread{
     }
 
 }
-
-
-
-
-   /** public void run() {
-
-        for (int i = 0; i < 10; i++) {
-
-            System.out.println("Курица");
-        }
-
-    }
-
-    public static void main(String[] args) {
-        for (int i = 0; i < 10; i++) {
-            System.out.println(" Не Курица");
-
-        }
-        (new Thread(new Chicken())).start();
-
-
-    }
-
-}*/
