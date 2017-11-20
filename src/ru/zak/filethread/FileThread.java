@@ -1,15 +1,18 @@
 package ru.zak.filethread;
-
 import java.io.*;
-
+/**
+ * Программа, позволяющая двум потокам параллельно читать данные из двух разных текстовых файлов,
+ * затем записывать считанные данные в результирующий файл по принципу:
+ * строка из первого файла, строка из второго файла
+ */
 public class FileThread extends Thread {
     private String adress;
     private static volatile BufferedWriter bufferedWriter;
+    //Конструктор
 
     public FileThread(String adress) {
         this.adress = adress;
     }
-
 
     public static void main(String[] args) throws IOException, InterruptedException {
 
@@ -29,6 +32,11 @@ public class FileThread extends Thread {
 
 
     }
+
+    /**
+     * Метод считывает строку и сохраняет в переменную a
+     * до тех пор, пока файл не станет пустым
+     */
     public void run(){
         String a;
         try(BufferedReader one = new BufferedReader(new FileReader(adress)))
@@ -41,6 +49,11 @@ public class FileThread extends Thread {
         }
 
    }
+
+    /**
+     * Метод записи строк в файл
+     * @param  a - строка
+     */
    public static synchronized void write(String a) throws IOException{
        bufferedWriter.write(a);
    }
