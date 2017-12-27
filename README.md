@@ -28,3 +28,11 @@
 Организовано последовательное копирование двух файлов. Замерили примерное время выполнения кода.
 Организовано параллельное копирование двух файлов. Замерили примерное время выполнения кода.
 <a href = "https://github.com/Nomlees/Threaddemo/tree/master/src/ru/zak/copyfiles"> Копирование файлов </a>
+
+# Music
+Качаем музыку с сайта https://zvonko.me/ 
+<a href = "https://github.com/Nomlees/Threaddemo/tree/master/src/ru/zak/music">Качаем музыку</a>
+
+# Downloader
+Класс для скачивания
+<a href = "https://github.com/Nomlees/Threaddemo/tree/master/src/ru/zak/downloader">Downloader</a>
